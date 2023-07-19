@@ -25,7 +25,11 @@ exports.resetPasswordToken = async (req, res) => {
     console.log("DETAILS", updatedDetails)
 
     // const url = `http://localhost:3000/update-password/${token}`
+<<<<<<< HEAD
     const url = `https://studynotion-edtech-rho.vercel.app/update-password/${token}`
+=======
+    const url = `https://studynotion-edtech.vercel.app/update-password/${token}`
+>>>>>>> e9cdd87c430b55f919e1fd2622cb92a6834c98cf
 
     await mailSender(
       email,
