@@ -38,6 +38,8 @@ function Navbar() {
 
   const [subLinks, setSubLinks] = useState([])
   const [loading, setLoading] = useState(false)
+  const [menu,showMenu] = useState(false);
+  
 
   useEffect(() => {
     ;(async () => {
@@ -159,7 +161,7 @@ function Navbar() {
           )}
           {token !== null && <ProfileDropdown />}
         </div>
-        <button className="mr-4 md:hidden">
+        <button onClick={() => showMenu((prev) => !prev)} className="mr-4 md:hidden">
           <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
         </button>
       </div>
